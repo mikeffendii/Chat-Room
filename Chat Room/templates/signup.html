@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signing up</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+</head>
+<body>
+    <div   class = "text-center line form-divider">SIGN UP PORTAL
+    <br><br>
+       <div> <form method = 'POST' class ="login-form spacer" id = "signup-form">
+            {% csrf_token %}
+            <div class = "input-group">
+                <img class="icon input-icon" src="{% static 'imgs/icons/profile.png' %}" alt="">
+                <input required name = "username" id = "username" type = "username" placeholder = 'Mahnoor Rana' class = "form-input" maxlength = "20" minlength = "5"></div>
+               <br>
+            <div class = "input-group">
+                <img class ="icon input-icon" src = "{% static 'imgs/icons/envelope.png' %}" alt=''>
+                <input  = "email" id = "email" type = "email" class = "form-input" placeholder = 'mahnoor@gmail.com' ></div>
+                 <br>
+            <div class = "input-group">
+                <img class ="icon input-icon" src = "{% static 'imgs/icons/key.png' %}" alt=''>
+                <input required name = "password" id = "password" type = "password" class = "form-input" placeholder = 'password' maxlength = "20" minlength = "5"></div>
+            <br>
+                <input type ='submit' class ='submit' value ='Sign Up'>
+            
+            
+        </form>
+    </div>
+</div>
+</body
+</html>

@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELCOME</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+    
+</head>
+<body>
+    <div style ="font: Sans-serif;font-weight: bold;" class = "text-center line form-divider"><h2>DISCUSSION ROOM</h2>
+    <br><br>
+    <h3 style ="font: Sans-serif;font-weight: bold;"> WELCOME IN YOUR ROOM!!! <h3>
+        <br><br>
+       <div> <form method = 'POST' class ="login-form spacer" id = "signup-form">
+            {% csrf_token %}
+            <div class = "input1">
+                
+                <input required name = "username" id = "username" type = "username" placeholder = 'Name' class = "form-input" maxlength = "20" minlength = "5"></div>
+               <br>
+            <div class = "input1">
+                
+                <input  required name = "Room Name" id = "Room name" type = "name" class = "form-input" placeholder = 'Room name' maxlength = "20" minlength = "5"></div>
+                 <br>
+            <div class = "input1">
+                  
+                    <input required name = "Created on" id = "date" type = "date" class = "form-input" placeholder = 'When was the room created?' ></div>
+            <br>
+            <div class = "input1">
+                
+                <input required name = "Description" id = "description" type = "text" class = "form-input" placeholder = 'Tell us about your skills?' maxlength = "500" minlength = "50"></div>
+            <br>
+            
+                <input type ='submit' class ='submit' value ='Create My Room'>
+            
+            
+        </form>
+    </div>
+</div>
+</div>
+</body>
+</html>
